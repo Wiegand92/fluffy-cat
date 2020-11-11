@@ -3,6 +3,8 @@ html {
 }
 main {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .intro {
     width: 100%;
@@ -11,13 +13,15 @@ main {
     top: 0px;
 }
 
-/* Adapted from https://www.w3schools.com/howto/howto_css_modals.asp */
+
 /* Set game height & width, match the background image. Declare grid container on game, and match the house image to the size. Place the house image back 1 index. */
 .game {
     max-height: 500px;
     max-width: 1000px;
-    width: 100%;
+    min-height: 200px;
+    min-width: 400px;
     height: 100%;
+    width: 100%;
     margin: auto;
     border: 5px inset orangered;
     display: grid;
@@ -32,7 +36,7 @@ main {
     z-index: -1;
 }
 
-/* Adapted from https://www.w3schools.com/howto/howto_css_modals.asp */
+
 /* Paw placement and size */
 .paw {
     height: 20px;
@@ -69,7 +73,8 @@ main {
 #paw10 {
     grid-area: 16/48/ span 2/ span 2; 
 }
-/* Adapted from https://www.w3schools.com/howto/howto_css_modals.asp */
+/*Modal boxes*/
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -149,3 +154,11 @@ main {
     display:none;
 }
 
+#reset {
+    background-color: crimson;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
