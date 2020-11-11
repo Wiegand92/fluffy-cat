@@ -1,3 +1,10 @@
+window.addEventListener('load', () => {
+    const paw = document.querySelectorAll(".paw");
+    paw.forEach(paw => {
+        paw.style.gridArea = `${Math.floor(Math.random() * 97)}/ ${Math.floor(Math.random() * 47)}/span2/span2`;
+    });
+})
+
 //Reset Button
 const button = document.querySelector("#reset");
 button.addEventListener("click", () =>  {
