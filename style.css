@@ -3,8 +3,6 @@ html {
 }
 main {
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 .intro {
     width: 100%;
@@ -18,14 +16,12 @@ main {
 .game {
     max-height: 500px;
     max-width: 1000px;
-    min-height: 200px;
-    min-width: 400px;
     height: 100%;
     width: 100%;
     margin: auto;
     border: 5px inset orangered;
     display: grid;
-    grid-template: repeat(100, 1fr) / repeat(50, 1fr);
+    grid-template: repeat(100, minmax(5px, 1fr)) / repeat(50, minmax(5px, 1fr));
 }
 .house {
     max-height: 500px;
@@ -34,6 +30,7 @@ main {
     width: 100%;
     grid-area: 1/1/span 100/span 50;
     z-index: -1;
+    
 }
 
 
@@ -41,38 +38,9 @@ main {
 .paw {
     height: 20px;
     width: 20px;
-    opacity: 0.2;
+    opacity: 0.15;
 }
-#paw1 {
-    grid-area: 2 / 2 / span 2 / span 2; 
-}
-#paw2 {
-    grid-area: 40 / 17 / span 2 / span 2; 
-}
-#paw3 {
-    grid-area: 96 / 46 / span 2 / span 2; 
-}
-#paw4 {
-    grid-area: 80 / 20 / span 2 / span 2; 
-}
-#paw5 {
-    grid-area: 73 / 24 / span 2 / span 2; 
-}
-#paw6 {
-    grid-area: 55/15/ span 2/ span 2; 
-}
-#paw7 {
-    grid-area: 30/8/ span 2/ span 2; 
-}
-#paw8 {
-    grid-area: 62/33/ span 2/ span 2; 
-}
-#paw9 {
-    grid-area: 27/39/ span 2/ span 2; 
-}
-#paw10 {
-    grid-area: 16/48/ span 2/ span 2; 
-}
+
 /*Modal boxes*/
 
 /* The Modal (background) */
@@ -111,54 +79,11 @@ main {
     max-height: 600px;
     max-width: 80%;
     border-radius: 10px;
-    z-index: 3;
-}
-
-#found1 {
-    display:none;
-}
-
-#found2 {
-    display:none; 
-}
-
-#found3 {
-    display:none;   
-}
-
-#found4 {
-    display:none;
-}
-
-#found5 {
-    display:none;
-}
-
-#found6 {
-    display:none;
-}
-
-#found7 {
-    display:none;
-}
-
-#found8 {
-    display:none;
-}
-
-#found9 {
-    display:none;
-}
-
-#found10 {
-    display:none;
 }
 
 #reset {
     background-color: crimson;
     max-width: 100px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 15px;
     border-radius: 5px;
 }
