@@ -11,18 +11,16 @@ main {
     top: 0px;
 }
 
-
 /* Set game height & width, match the background image. Declare grid container on game, and match the house image to the size. Place the house image back 1 index. */
 .game {
     max-height: 500px;
     max-width: 1000px;
-    height: 100%;
-    width: 100%;
     margin: auto;
     border: 5px inset orangered;
     display: grid;
     grid-template: repeat(100, minmax(5px, 1fr)) / repeat(50, minmax(5px, 1fr));
 }
+
 .house {
     max-height: 500px;
     max-width: 1000px;
@@ -30,18 +28,14 @@ main {
     width: 100%;
     grid-area: 1/1/span 100/span 50;
     z-index: -1;
-    
 }
 
-
-/* Paw placement and size */
+/* Paw size */
 .paw {
     height: 20px;
     width: 20px;
     opacity: 0.15;
 }
-
-/*Modal boxes*/
 
 /* The Modal (background) */
 .modal {
@@ -56,10 +50,8 @@ main {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
-
-
 
 /* The Prizes*/
 .modalbox {
@@ -68,16 +60,16 @@ main {
     border: 2px dotted red;
     border-radius: 10px;
     max-width: 80%;
-    height: 80%;
+    max-height: 80%;
     z-index: 2;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
 }
 
 .surprisepic {
-    max-height: 600px;
-    max-width: 80%;
+    max-height: 60%;
+    max-width: 60%;
     border-radius: 10px;
 }
 
