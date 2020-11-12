@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const house = document.querySelector(".house");
     house.style.gridArea = "1/1/span 101/span 51";
     paw.forEach(paw => {
-        paw.style.gridArea = `${Math.floor(Math.random() * 96) +1}/ ${Math.floor(Math.random() * 46) +1}/span2/span2`;
+        paw.style.gridArea = `${Math.floor(Math.random() * 96) +2}/ ${Math.floor(Math.random() * 46) +2}/span2/span2`;
     });
 });
 
@@ -13,7 +13,7 @@ const button = document.querySelector("#reset");
 button.addEventListener("click", () =>  {
     const paw = document.querySelectorAll(".paw");
     paw.forEach(paw => {
-        paw.style.gridArea = `${Math.floor(Math.random() * 97)}/ ${Math.floor(Math.random() * 47)}/span2/span2`;
+        paw.style.gridArea = `${Math.floor(Math.random() * 96) +2}/ ${Math.floor(Math.random() * 46) +2}/span2/span2`;
     });
 });
 
