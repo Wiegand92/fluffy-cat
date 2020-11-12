@@ -1,11 +1,14 @@
-window.addEventListener('load', () => {
+//When the page loads, place the paws in random spots on the grid.
+window.addEventListener('DOMContentLoaded', () => {
     const paw = document.querySelectorAll(".paw");
+    const house = document.querySelector(".house");
+    house.style.gridArea = "1/1/span 101/span 51";
     paw.forEach(paw => {
-        paw.style.gridArea = `${Math.floor(Math.random() * 97)}/ ${Math.floor(Math.random() * 47)}/span2/span2`;
+        paw.style.gridArea = `${Math.floor(Math.random() * 96) +1}/ ${Math.floor(Math.random() * 46) +1}/span2/span2`;
     });
-})
+});
 
-//Reset Button
+//Reset Button places the paws in new spots on the grid
 const button = document.querySelector("#reset");
 button.addEventListener("click", () =>  {
     const paw = document.querySelectorAll(".paw");
@@ -14,6 +17,7 @@ button.addEventListener("click", () =>  {
     });
 });
 
+//When you click on the paw, open up the modal window, modal box, and picture.
 const paws = document.querySelectorAll(".paw");
 paws.forEach(paw => {
     paw.addEventListener("click", event => {
@@ -26,6 +30,7 @@ paws.forEach(paw => {
     });
 });
 
+//When you click on an open modal, close the modal window, modal box, and picture.
 const modals = document.querySelectorAll(".modal")
 modals.forEach(modal => {
     modal.addEventListener("click", event => {
